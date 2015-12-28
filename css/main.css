@@ -1,0 +1,52 @@
+/* facebook gomb */
+.btn-facebook {
+    border: none;
+    background-color: #3A5795;
+    color: #f0f0f0;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.btn-facebook:hover {
+     box-shadow: 0px 0px 8px black;
+}
+
+/* alapban eltüntetjük a gombot */
+.profile-div {
+    
+    position: fixed;
+    left: -100%;
+    
+    opacity: 0;
+    /*transition: all 1s;*/
+}
+
+/* alapban eltüntetnük a gombot */
+.profile-div.show {
+   
+    position: relative;
+    animation-name: facebook;
+    animation-duration: 0.5s;
+    
+    
+    left: 0;
+    
+    opacity: 1;
+    
+}
+
+/* profil div*/
+.profile-div form {
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* Keyframes: kulcskockák*/
+@keyframes facebook {
+    0%      {opacity: 0; left: -100%;}
+    25%     {opacity: 0; left: -75%;}
+    50%     {opacity: 0; left: -50%;}
+    75%     {opacity: 0; left: -25%;}
+    100%    {opacity: 1; left: 0;}
+}
